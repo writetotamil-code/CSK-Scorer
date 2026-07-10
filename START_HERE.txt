@@ -1,0 +1,106 @@
+╔═══════════════════════════════════════════════════════════════╗
+║         CRICKET SCORER PWA - DEPLOYMENT QUICK START           ║
+║                    Version 1.1 - FIXED                        ║
+╚═══════════════════════════════════════════════════════════════╝
+
+🎯 WHAT'S FIXED:
+✅ iPhone Safari PWA installation (no more 404 errors!)
+✅ Match auto-ends when target is reached
+✅ Victory display shows "🏆 WON BY X WICKETS"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📦 FILES IN THIS ZIP:
+
+MUST UPLOAD (3 files):
+├── index.html          ⭐ Main app with bug fixes
+├── manifest.json       ⭐ Fixed PWA manifest  
+└── sw.js              ⭐ Fixed service worker
+
+OPTIONAL (no changes, included for completeness):
+└── worker.js          ⏭️  Cloudflare Worker (same as before)
+
+DOCUMENTATION:
+├── README.md           📖 Quick deployment guide
+├── CHANGES.md          📖 Detailed changelog
+└── PWA_FIX_GUIDE.md   📖 Troubleshooting guide
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 DEPLOYMENT IN 3 STEPS:
+
+1. BACKUP (Optional but recommended)
+   • Download your current index.html, manifest.json, sw.js
+
+2. UPLOAD TO CLOUDFLARE
+   • Upload index.html (replaces existing)
+   • Upload manifest.json (replaces existing)
+   • Upload sw.js (replaces existing)
+   
+3. TEST
+   • Open site in iPhone Safari
+   • Tap Share → "Add to Home Screen"
+   • Launch from home screen
+   • Should work without 404 error ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💾 YOUR DATA IS SAFE!
+
+Q: Will this affect my match history or live matches?
+A: NO! Your Cloudflare KV database is completely separate.
+   Only frontend code changes. All data remains intact.
+
+Q: What if something goes wrong?
+A: Re-upload your backup files. Database is never touched.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📱 FOR EXISTING PWA USERS:
+
+If someone already installed the broken PWA:
+
+1. Long-press app icon on home screen
+2. Tap "Remove App"
+3. Visit site in Safari
+4. Add to home screen again
+5. Now works! ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ TESTING CHECKLIST:
+
+PWA Installation:
+□ Load site in iPhone Safari
+□ Add to home screen
+□ Launch from icon (should work, no 404)
+□ App loads correctly
+
+Target Chase Feature:
+□ Start new match
+□ Go to Setup tab
+□ Set "TARGET (2nd innings)" to 50
+□ Apply settings
+□ Score runs until reaching 50
+□ Match should auto-end with victory message
+
+History:
+□ Check History tab
+□ All old matches should still be there
+□ Saved matches show win/loss correctly
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❓ NEED HELP?
+
+Read the included documentation:
+• README.md - Overview and quick guide
+• CHANGES.md - Detailed technical changes
+• PWA_FIX_GUIDE.md - Complete troubleshooting
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎉 You're all set! Upload the 3 files and enjoy bug-free scoring!
+
+Version: 1.1
+Release Date: March 7, 2026
